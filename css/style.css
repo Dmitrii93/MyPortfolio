@@ -224,8 +224,11 @@ h6 {
 .promo {
   min-height: 100vh;
   position: relative;
-  background: url("../img/Background.jpg") no-repeat center/cover;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(15%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/Background.jpg") no-repeat center/cover;
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.5)), url("../img/Background.jpg") no-repeat center/cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.5)), url("../img/Background.jpg") no-repeat center/cover;
   padding-top: 205px;
+  color: white;
 }
 
 .promo__title {
@@ -266,7 +269,7 @@ h6 {
 }
 
 .promo__link {
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -598,7 +601,7 @@ h6 {
 .experience__wrapper {
   margin-top: 60px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, auto));
   -webkit-column-gap: 130px;
      -moz-column-gap: 130px;
           column-gap: 130px;
@@ -1252,6 +1255,10 @@ h6 {
     padding-top: 40px;
   }
 
+  .experience__wrapper {
+    margin-top: 40px;
+  }
+
   .skills {
     padding-top: 40px;
   }
@@ -1315,7 +1322,9 @@ h6 {
   }
 }
 @supports (-webkit-appearance:none){
-.promo{background:url("../img/Background.webp") no-repeat center/cover}
+.promo{background:-webkit-gradient(linear, left top, left bottom, color-stop(15%, rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.5))), url("../img/Background.webp") no-repeat center/cover}
+.promo{background:-o-linear-gradient(top, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.5)), url("../img/Background.webp") no-repeat center/cover}
+.promo{background:linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 15%, rgba(0, 0, 0, 0.5)), url("../img/Background.webp") no-repeat center/cover}
 }
 
  @media (max-width: 1440px){
