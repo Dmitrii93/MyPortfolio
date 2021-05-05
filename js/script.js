@@ -62,16 +62,9 @@ myScroll(document.querySelector('.promo__link:nth-child(2)'),about)
 
 myForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  $.ajax({
-    type: "post",
-    url:"mailer/smart.php",
-    data: $(this).serialize()
-  }).done(function () {
     $(this).find("input").val("");
-    $(this).find("textarea").val("");
-    myForm.trigger('reset');
-  });
+    $(this).find("textarea").val("С целью безопасности форма носит тестовый характер. Пожалуйста, свяжитесь со мной напрямую, используя контакты, оставленные рядом.");
   return false;
-})
+});
 
 }); //end jquery
